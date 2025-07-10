@@ -1,0 +1,17 @@
+[project]
+name = "Format Converter"
+version = "0.1.0"
+description = "Converter file format into desire file format"
+authors = [
+    {name = "Joseph Fernando", email = "srikanthfernando3@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "numpy"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
