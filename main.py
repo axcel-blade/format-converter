@@ -1,16 +1,48 @@
-# This is a sample Python script.
+from tkinter import *
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+class FormatConverter():
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Format Converter")
+        self.root.geometry("400x300")
+        self.root.resizable(False, False)
+    
+        # Title frame
+        self.titleFrame = Frame(root)
+        self.titleFrame.pack(side=TOP, fill=X)
 
+        # Title
+        self.titleLabel = Label(self.titleFrame, text="Format Converter", font=("Arial", 18, "bold")).pack(side=TOP, fill=X)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+        # Converter buttons and progress bar frame
+        self.converterFrame = Frame(root)
+        self.converterFrame.pack(side=TOP, fill=X)
 
+        # Converter buttons
+        self.converterButtonsFrame = Frame(self.converterFrame)
+        self.converterButtonsFrame.pack(side=TOP, fill=X)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+        # Video converter
+        self.videoConverterButton = Button(self.converterButtonsFrame, text="Video Converter", font=("Arial", 12)).pack(side=TOP, fill=X, padx=10, pady=10)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+        # Audio converter
+        self.audioConverterButton = Button(self.converterButtonsFrame, text="Audio Converter", font=("Arial", 12)).pack(side=TOP, fill=X, padx=10, pady=10)
+
+        # Progress bar frame
+        self.progressBarFrame = Frame(self.converterFrame)
+        self.progressBarFrame.pack(side=TOP, fill=X)
+
+        # Progress bar
+        self.progressBarLabel = Label(self.progressBarFrame, text="Progress: 0%", font=("Arial", 12)).pack(side=TOP, fill=X)
+
+        # Developer frame
+        self.developerFrame = Frame(root)
+        self.developerFrame.pack(side=BOTTOM, fill=X)
+
+        # Developer label
+        self.developerLabel = Label(self.developerFrame, text="Developed by: Joseph Fernando", font=("Arial", 12)).pack(side=BOTTOM, fill=X, pady=10)
+
+if __name__ == "__main__":
+    root = Tk()
+    converter = FormatConverter(root)
+    root.mainloop()
