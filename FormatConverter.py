@@ -83,12 +83,14 @@ class FormatConverter():
         self.developerLabel.pack(side=BOTTOM, fill=X, pady=10)
         self.developerLabel.config(fg=TEXT_COLOR, bg=BACKGROUND_COLOR)
 
+    # Show video converter frame
     def showVideoConverterFrame(self):
         self.converterFrame.pack_forget()
 
         self.videoConverter = VideoConverter(BACKGROUND_COLOR, TEXT_COLOR, BUTTON_COLOR, self.root, self)
         self.videoConverter.videoConverterFrame.pack(side=TOP, fill=X)
 
+    # Show main menu
     def showMainMenu(self):
         self.videoConverter.videoConverterFrame.pack_forget()
         self.converterFrame.pack(side=TOP, fill=X)
