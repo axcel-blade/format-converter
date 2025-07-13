@@ -1,11 +1,12 @@
 from tkinter import *
-from FormatConverter import FormatConverter
+from FormatConverter import *
 
 class VideoConverter():
-    def __init__(self, BACKGROUND_COLOR, TEXT_COLOR, BUTTON_COLOR, root):
+    def __init__(self, BACKGROUND_COLOR, TEXT_COLOR, BUTTON_COLOR, root, mainMenu):
         self.BACKGROUND_COLOR = BACKGROUND_COLOR
         self.TEXT_COLOR = TEXT_COLOR        
         self.BUTTON_COLOR = BUTTON_COLOR
+        self.mainMenu = mainMenu
 
         # Video converter frame
         self.videoConverterFrame = Frame(root)
@@ -23,6 +24,4 @@ class VideoConverter():
         self.backButton.config(bg=BUTTON_COLOR, fg=TEXT_COLOR)
 
     def goBack(self):
-        self.videoConverterFrame.pack_forget()
-        #self.FormatConverter = FormatConverter()
-        #self.FormatConverter.showMainMenu()
+        self.mainMenu.showMainMenu()

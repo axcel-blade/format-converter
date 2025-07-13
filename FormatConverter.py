@@ -1,5 +1,5 @@
 from tkinter import *
-from VideoConverter import VideoConverter
+from VideoConverter import *
 
 class FormatConverter():
     global BACKGROUND_COLOR
@@ -86,8 +86,7 @@ class FormatConverter():
     def showVideoConverterFrame(self):
         self.converterFrame.pack_forget()
 
-        self.videoConverter = VideoConverter(BACKGROUND_COLOR, TEXT_COLOR, BUTTON_COLOR, root)
-        self.videoConverter.backButton.config(config=self.showMainMenu)
+        self.videoConverter = VideoConverter(BACKGROUND_COLOR, TEXT_COLOR, BUTTON_COLOR, self.root, self)
         self.videoConverter.videoConverterFrame.pack(side=TOP, fill=X)
 
     def showMainMenu(self):
