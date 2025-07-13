@@ -24,5 +24,5 @@ class VideoConverter():
 
     def goBack(self):
         self.videoConverterFrame.pack_forget()
-        self.FormatConverter = FormatConverter()
-        self.FormatConverter.showMainMenu()
+        #self.FormatConverter = FormatConverter()
+        #self.FormatConverter.showMainMenu()

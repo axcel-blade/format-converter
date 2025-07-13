@@ -86,7 +86,7 @@ class FormatConverter():
     def showVideoConverterFrame(self):
         self.converterFrame.pack_forget()
 
-        self.videoConverter = VideoConverter(BACKGROUND_COLOR, TEXT_COLOR, BUTTON_COLOR, self.root)
+        self.videoConverter = VideoConverter(BACKGROUND_COLOR, TEXT_COLOR, BUTTON_COLOR, root)
         self.videoConverter.backButton.config(config=self.showMainMenu)
         self.videoConverter.videoConverterFrame.pack(side=TOP, fill=X)
 
