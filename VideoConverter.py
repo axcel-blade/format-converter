@@ -23,5 +23,6 @@ class VideoConverter():
         self.backButton.pack(side=TOP, fill=X, padx=10, pady=10)
         self.backButton.config(bg=BUTTON_COLOR, fg=TEXT_COLOR)
 
+    # Go back to main menu
     def goBack(self):
         self.mainMenu.showMainMenu()
