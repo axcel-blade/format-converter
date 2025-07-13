@@ -14,7 +14,7 @@ class FormatConverter():
     def __init__(self, root):
         self.root = root
         self.root.title("Format Converter")
-        self.root.geometry("720x360")
+        self.root.geometry("500x300")
         self.root.resizable(False, False)
         self.root.configure(bg=BACKGROUND_COLOR)
 
