@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import filedialog
 from FormatConverter import *
 import os
 from pathlib import Path
@@ -31,7 +32,7 @@ class VideoConverter():
         self.fileLocationLabel.config(bg=BACKGROUND_COLOR, fg=TEXT_COLOR)
 
         # Select file button
-        self.SelectFileButton = Button(self.fileLocationFrame, text="Select File", font=("Arial", 12), command=self.openFile)
+        self.SelectFileButton = Button(self.fileLocationFrame, text="Select File", font=("Arial", 12), command=self.selectFile)
         self.SelectFileButton.pack(side=LEFT, fill=X, padx=10, pady=10)
         self.SelectFileButton.config(bg=BUTTON_COLOR, fg=TEXT_COLOR)
 
@@ -63,8 +64,12 @@ class VideoConverter():
         self.videoConverterFrame.pack_forget()
         self.mainMenu.showMainMenu()
 
-    def openFile(self):
-        pass
+    # Select file
+    def selectFile(self):
+        fileName = filedialog.askopenfilename(initialdir=self.DEFAULT_FILE_PATH, title="Select a file", filetypes=(("All Files", "*.*"), ("MP4 Files", "*.mp4"), ("AVI Files", "*.avi")))
+
+        fileLocation = Path(fileName)
+        self.fileLocationLabel.config(text=fileLocation)
 
     def convertToVideoType(self):
         pass
