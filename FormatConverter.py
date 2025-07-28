@@ -26,7 +26,7 @@ class FormatConverter():
         x = (screen_width - width) // 2
         y = (screen_height - height) // 2
 
-        self.root.geometry("500x300")
+        self.root.geometry("720x480")
         #self.root.geometry(f"{width}x{height}+{x}+{y}")
 
         self.root.resizable(False, False)
