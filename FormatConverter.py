@@ -14,7 +14,21 @@ class FormatConverter():
     def __init__(self, root):
         self.root = root
         self.root.title("Format Converter")
+
+        #unction to auto-adjust any window to its natural size
+        self.root.update_idletasks()
+        width = self.root.winfo_reqwidth()
+        height = self.root.winfo_reqheight()
+        
+        # Center the window on screen
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+        x = (screen_width - width) // 2
+        y = (screen_height - height) // 2
+
         self.root.geometry("500x300")
+        #self.root.geometry(f"{width}x{height}+{x}+{y}")
+
         self.root.resizable(False, False)
         self.root.configure(bg=BACKGROUND_COLOR)
 
